@@ -30,5 +30,20 @@ Route::get('/size-guide', function () {
     return view('frontend.size-guide');
 })->name('size-guide');
 
+Route::get('/faq', function () {
+    return view('frontend.faq');
+})->name('faq');
+
+Route::get('/contact-us', function () {
+    return view('frontend.contact');
+})->name('contact-us');
+
+Route::get('/sale', function () {
+    return view('frontend.sale');
+})->name('sale');
+
+Route::get('/accessories', function () {
+    return view('frontend.accessories');
+})->name('accessories');
 
 // For Admin Routes
