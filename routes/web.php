@@ -9,7 +9,7 @@ Route::get('/', function () {
 Route::get('/about-us', function () {
     return view('frontend.about');
 })->name('about-us');
- 
+
 Route::get('/new-arrivals', function () {
     return view('frontend.arrivals');
 })->name('new-arrivals');
@@ -21,7 +21,7 @@ Route::get('/product-category', function () {
 Route::get('/track-order', function () {
     return view('frontend.track-order');
 })->name('track-order');
- 
+
 Route::get('/returns-exchange', function () {
     return view('frontend.returns');
 })->name('returns-exchange');
@@ -83,3 +83,4 @@ Route::get('/wishlist', function () {
 })->name('wishlist');
 
 // For Admin Routes
+require base_path('routes/admin.php');
