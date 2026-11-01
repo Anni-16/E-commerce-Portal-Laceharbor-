@@ -143,7 +143,7 @@
                     <span class="sale-pct">30% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -151,7 +151,7 @@
                     <h4>Lace Push-Up Bra</h4>
                     <p class="prod-desc">Delicate lace detailing with comfortable push-up padding.</p>
                     <div class="product-price"><span class="price">₹1,199</span><span class="old-price">₹1,699</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -161,7 +161,7 @@
                     <span class="sale-pct">35% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -169,7 +169,7 @@
                     <h4>Satin Night Gown</h4>
                     <p class="prod-desc">Silky satin fabric for a luxurious night's sleep.</p>
                     <div class="product-price"><span class="price">₹1,499</span><span class="old-price">₹2,299</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -179,7 +179,7 @@
                     <span class="sale-pct">32% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -187,7 +187,7 @@
                     <h4>Floral Wrap Dress</h4>
                     <p class="prod-desc">Feminine floral wrap dress perfect for brunches and casual days.</p>
                     <div class="product-price"><span class="price">₹1,299</span><span class="old-price">₹1,899</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -197,7 +197,7 @@
                     <span class="sale-pct">20% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -205,7 +205,7 @@
                     <h4>Denim Jacket</h4>
                     <p class="prod-desc">Classic denim jacket with a modern cut. A wardrobe staple.</p>
                     <div class="product-price"><span class="price">₹2,299</span><span class="old-price">₹2,899</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -215,7 +215,7 @@
                     <span class="sale-pct">33% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -223,7 +223,7 @@
                     <h4>Active Sports Bra</h4>
                     <p class="prod-desc">High-support sports bra with moisture-wicking fabric.</p>
                     <div class="product-price"><span class="price">₹999</span><span class="old-price">₹1,499</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -233,7 +233,7 @@
                     <span class="sale-pct">47% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -241,7 +241,7 @@
                     <h4>Pearl Necklace Set</h4>
                     <p class="prod-desc">Timeless pearl necklace set — perfect for gifting or everyday wear.</p>
                     <div class="product-price"><span class="price">₹799</span><span class="old-price">₹1,499</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -251,7 +251,7 @@
                     <span class="sale-pct">24% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -259,7 +259,7 @@
                     <h4>Evening Slip Dress</h4>
                     <p class="prod-desc">A sleek satin slip dress that transitions from day to evening.</p>
                     <div class="product-price"><span class="price">₹1,899</span><span class="old-price">₹2,499</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -269,7 +269,7 @@
                     <span class="sale-pct">29% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -277,7 +277,7 @@
                     <h4>Cotton Hipster Panty</h4>
                     <p class="prod-desc">Super soft 100% cotton hipster panty for all-day comfort.</p>
                     <div class="product-price"><span class="price">₹499</span><span class="old-price">₹699</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -287,7 +287,7 @@
                     <span class="sale-pct">26% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -295,7 +295,7 @@
                     <h4>Seamless T-Shirt Bra</h4>
                     <p class="prod-desc">Ultra-smooth seamless cups for an invisible look under fitted tops.</p>
                     <div class="product-price"><span class="price">₹1,399</span><span class="old-price">₹1,899</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -305,7 +305,7 @@
                     <span class="sale-pct">27% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -313,7 +313,7 @@
                     <h4>Silk Lounge Robe</h4>
                     <p class="prod-desc">Luxurious silk robe with a sash tie, perfect for mornings and evenings.</p>
                     <div class="product-price"><span class="price">₹2,199</span><span class="old-price">₹2,999</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -323,7 +323,7 @@
                     <span class="sale-pct">30% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -331,7 +331,7 @@
                     <h4>High Waist Shaper</h4>
                     <p class="prod-desc">Tummy-control high waist panty with smooth, seamless finish.</p>
                     <div class="product-price"><span class="price">₹699</span><span class="old-price">₹999</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 
@@ -341,7 +341,7 @@
                     <span class="sale-pct">50% OFF</span>
                     <div class="product-actions">
                         <button><i class="fas fa-heart"></i></button>
-                        <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                        <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
                 <div class="product-info">
@@ -349,7 +349,7 @@
                     <h4>Wireless Comfort Bra</h4>
                     <p class="prod-desc">All-day comfort with soft cups and no underwire for a relaxed fit.</p>
                     <div class="product-price"><span class="price">₹1,599</span><span class="old-price">₹3,199</span></div>
-                    <button class="add-to-cart" onclick="window.location='product-details.html'">View Product</button>
+                    <button class="add-to-cart" onclick="window.location='{{ route('products-details') }}'">View Product</button>
                 </div>
             </div>
 

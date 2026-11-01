@@ -66,14 +66,14 @@
                 <span class="badge">Hot</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Pearl Necklace Set</h4>
                 <div class="product-price"><span class="price">₹799</span><span class="old-price">₹1,299</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -83,14 +83,14 @@
                 <span class="badge">New</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Gold Hoop Earrings</h4>
                 <div class="product-price"><span class="price">₹599</span><span class="old-price">₹899</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -99,14 +99,14 @@
                 <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" alt="Layered Bracelet Set" />
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Layered Bracelet Set</h4>
                 <div class="product-price"><span class="price">₹1,299</span><span class="old-price">₹1,799</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -116,14 +116,14 @@
                 <span class="badge">New</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Leather Tote Bag</h4>
                 <div class="product-price"><span class="price">₹2,499</span><span class="old-price">₹3,499</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -133,14 +133,14 @@
                 <span class="badge sale">Sale</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Mini Sling Bag</h4>
                 <div class="product-price"><span class="price">₹1,899</span><span class="old-price">₹2,699</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -149,14 +149,14 @@
                 <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80" alt="Quilted Wallet" />
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Quilted Wallet</h4>
                 <div class="product-price"><span class="price">₹999</span><span class="old-price">₹1,399</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -166,14 +166,14 @@
                 <span class="badge">New</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Satin Scrunchie Set</h4>
                 <div class="product-price"><span class="price">₹349</span><span class="old-price">₹549</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -183,14 +183,14 @@
                 <span class="badge">Hot</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Pearl Hair Pins</h4>
                 <div class="product-price"><span class="price">₹699</span><span class="old-price">₹999</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -199,14 +199,14 @@
                 <img src="https://images.unsplash.com/photo-1595475207225-428b62bda831?w=500&q=80" alt="Embellished Headband" />
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Embellished Headband</h4>
                 <div class="product-price"><span class="price">₹499</span><span class="old-price">₹749</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -216,14 +216,14 @@
                 <span class="badge">New</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Silk Printed Scarf</h4>
                 <div class="product-price"><span class="price">₹1,199</span><span class="old-price">₹1,699</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -233,14 +233,14 @@
                 <span class="badge sale">Sale</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Pashmina Wrap</h4>
                 <div class="product-price"><span class="price">₹899</span><span class="old-price">₹1,299</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -250,14 +250,14 @@
                 <span class="badge">New</span>
                 <div class="product-actions">
                     <button><i class="fas fa-heart"></i></button>
-                    <button onclick="window.location='product-details.html'"><i class="fas fa-eye"></i></button>
+                    <button onclick="window.location='{{ route('products-details') }}'"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
             <div class="product-info">
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Slim Leather Belt</h4>
                 <div class="product-price"><span class="price">₹749</span><span class="old-price">₹1,099</span></div>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 

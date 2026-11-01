@@ -14,6 +14,7 @@
          <div class="footer-links">
              <h4>Shop</h4>
              <a href="{{ route('new-arrivals') }}">New Arrivals</a>
+             <a href="{{ route('products') }}">All Collations</a>
              <a href="{{ route('product-category') }}">Bras</a>
              <a href="{{ route('product-category') }}">Panties</a>
              <a href="{{ route('product-category') }}">Nightwear</a>
@@ -24,6 +25,8 @@
              <a href="{{ route('about-us') }}">About Us</a>
              <a href="{{ route('track-order') }}">Track Your Order</a>
              <a href="{{ route('returns-exchange') }}">Returns &amp; Exchange</a>
+             <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
+             <a href="{{ route('terms-conditions') }}">Terms &amp; Conditions</a>
              <a href="{{ route('size-guide') }}">Size Guide</a>
              <a href="{{ route('faq') }}">FAQ</a>
              <a href="{{ route('contact-us') }}">Contact Us</a>
@@ -34,14 +37,19 @@
              <a href="tel:+919971492097"><i class="fa-solid fa-phone"></i> +91 9971492097</a>
              <h4 class="newsletter-title">Join Our Inner Circle</h4>
              <p>Be the first to know about new launches, exclusive offers and styling tips.</p>
-             <form class="footer-newsletter"><input type="email" placeholder="Enter your email"
-                     aria-label="Email address" /><button type="submit">Join</button></form>
+             <form class="footer-newsletter">
+                 <input type="email" placeholder="Enter your email" aria-label="Email address" />
+                 <button type="submit">Join</button>
+             </form>
          </div>
      </div>
      <div class="footer-bottom">
          <p>&copy; 2026 LACEHARBOR India. All Rights Reserved.</p>
          <strong>4.8/5 Rated by Customers</strong>
-         <span style="color: rgb(29, 30, 39);"><a style="color: rgb(29, 30, 39);" href="http://trendtech.in" target="_blank" rel="noopener noreferrer">E-commerce Portal Design</a> By <a style="color: rgb(29, 30, 39);" href="http://trendtech.in" target="_blank" rel="noopener noreferrer">Trend Tech</a></span>
+         <span style="color: rgb(29, 30, 39);">
+             <a style="color: rgb(29, 30, 39);" href="http://trendtech.in" target="_blank" rel="noopener noreferrer">E-commerce Portal Design</a> By
+             <a style="color: rgb(29, 30, 39);" href="http://trendtech.in" target="_blank" rel="noopener noreferrer">Trend Tech</a>
+         </span>
      </div>
  </footer>
 

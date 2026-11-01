@@ -46,4 +46,40 @@ Route::get('/accessories', function () {
     return view('frontend.accessories');
 })->name('accessories');
 
+Route::get('/cart', function () {
+    return view('frontend.cart');
+})->name('cart');
+
+Route::get('/forget-password', function () {
+    return view('frontend.forget-password');
+})->name('forget-password');
+
+Route::get('/login', function () {
+    return view('frontend.login');
+})->name('login');
+
+Route::get('/privacy-policy', function () {
+    return view('frontend.privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/products-details', function () {
+    return view('frontend.products-details');
+})->name('products-details');
+
+Route::get('/products', function () {
+    return view('frontend.products');
+})->name('products');
+
+Route::get('/register', function () {
+    return view('frontend.register');
+})->name('register');
+
+Route::get('/terms-conditions', function () {
+    return view('frontend.terms-conditions');
+})->name('terms-conditions');
+
+Route::get('/wishlist', function () {
+    return view('frontend.wishlist');
+})->name('wishlist');
+
 // For Admin Routes

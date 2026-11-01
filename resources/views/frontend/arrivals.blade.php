@@ -74,7 +74,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Lace Push-Up Bra</h4>
                 <p>Delicate lace detailing with comfortable push-up padding for everyday elegance.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Satin Padded Bra</h4>
                 <p>Smooth satin finish with light padding for a seamless look under clothing.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -107,7 +107,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Sheer Lace Bra</h4>
                 <p>Lightweight sheer lace design with underwire support, no padding.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -124,7 +124,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Active Sports Bra</h4>
                 <p>High-impact support with moisture-wicking fabric for all your workouts.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -140,7 +140,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Yoga Sports Bra</h4>
                 <p>Soft, stretchy fabric perfect for yoga, pilates and low-impact workouts.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -158,7 +158,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Comfort Wireless Bra</h4>
                 <p>All-day comfort with no underwire — soft cups and breathable fabric.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -174,7 +174,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Bralette Wireless</h4>
                 <p>Trendy bralette with delicate straps — perfect for layering or lounging.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -191,7 +191,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Seamless T-Shirt Bra</h4>
                 <p>Ultra-smooth seamless cups for an invisible look under fitted tops.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -209,7 +209,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Microfibre T-Shirt Bra</h4>
                 <p>Feather-light microfibre with full coverage and a smooth silhouette.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -226,7 +226,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Minimalist Non-Padded</h4>
                 <p>Clean, minimal design with firm underwire support and no padding.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -243,7 +243,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Floral Padded Bra</h4>
                 <p>Beautiful floral embroidery on soft mesh with lightly padded cups.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
@@ -259,7 +259,7 @@
                 <p class="product-brand">LACEHARBOR</p>
                 <h4>Lounge Wireless Bra</h4>
                 <p>Super-soft lounge bra for relaxed days at home or casual outings.</p>
-                <a href="product-details.html" class="shop-link">Shop Now →</a>
+                <a href="{{ route('products-details') }}" class="shop-link">Shop Now →</a>
             </div>
         </div>
 
