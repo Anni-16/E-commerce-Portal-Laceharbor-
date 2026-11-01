@@ -3,17 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laceharbor | E-commerce Dashboard</title>
-
+    <title>{{ ucfirst(str_replace('-', ' ', request()->segment(2) ?? 'Dashboard')) }} | Laceharbor</title>
+    
     <!-- ====== CSS Links Start ====== -->
-    @include('frontend.partials.csslink')
+    @include('backend.partials.csslink')
     <!-- ====== CSS Links End ====== -->
-
 
 </head>
 
@@ -23,13 +20,13 @@
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- ====== Side NavBar Section Start ====== -->
-    @include('frontend.partials.side-navbar')
+    @include('backend.partials.side-navbar')
     <!-- ====== Side NavBar Section End ====== -->
 
     <div class="zentic-main" id="zenticMain">
 
         <!-- ====== Header Section Start ====== -->
-        @include('frontend.partials.header')
+        @include('backend.partials.header')
         <!-- ====== Header Section End ====== -->
 
 
@@ -39,13 +36,13 @@
 
 
         <!-- ========= Footer Section Start ========= -->
-        @include('frontend.partials.footer')
+        @include('backend.partials.footer')
         <!-- ========= Footer Section End ========= -->
 
     </div>
 
     <!-- ========== Script Links Start ========== -->
-    @include('frontend.partials.scriptlink')
+    @include('backend.partials.scriptlink')
     <!-- ========== Script Links End ========== -->
 
 </body>

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.welcome');
 });
+
 Route::get('/about-us', function () {
     return view('frontend.about');
 })->name('about-us');

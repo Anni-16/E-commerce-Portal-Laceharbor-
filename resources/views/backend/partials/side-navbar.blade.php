@@ -1,8 +1,8 @@
  <aside class="zentic-sidebar" id="zenticSidebar">
      <div class="sidebar-brand">
-         <a href="index.html" class="brand-link">
+         <a href="{{ route('backend.dashboard') }}" class="brand-link">
              <div class="brand-icon">
-                 <img src="images/logo.png" alt="Laceharbor" style="width: 40px; height: 40px;">
+                 <img src="{{ asset('back-end/images/logo.png') }}" alt="Laceharbor" style="width: 40px; height: 40px;">
              </div>
              <div class="brand-text">
                  <span class="brand-name">Lace<span>harbor</span></span>
@@ -20,9 +20,46 @@
                          <span class="nav-text">Dashboard</span>
                      </a>
                  </li>
+                 <li class="nav-item has-dropdown">
+                     <a href="#" class="nav-link nav-dropdown-toggle">
+                         <i class="icon-file nav-icon"></i>
+                         <span class="nav-text">Static Pages</span>
+                         <i class="icon-chevron-down nav-dropdown-arrow"></i>
+                     </a>
+                     <ul class="nav-dropdown-menu">
+                         <li>
+                             <a href="about.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>About Us</a>
+                         </li>
+                         <li>
+                             <a href="settings.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>Shipping & Delivery</a>
+                         </li>
+                         <li>
+                             <a href="reports.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>Returns & Exchanges</a>
+                         </li>
+                         <li>
+                             <a href="notifications-page.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>Contacts Us</a>
+                         </li>
+                         <li>
+                             <a href="blank.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>Privacy Policy</a>
+                         </li>
+                         <li>
+                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>Terms & Services</a>
+                         </li>
+                         <li>
+                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
+                                     class="nav-sub-dot"></span>Social Media</a>
+                         </li>
+                     </ul>
+                 </li>
              </ul>
          </div>
-         <div class="nav-section">
+         <!-- <div class="nav-section">
              <span class="nav-section-label">Manage website Settings<i class="icon-chevron-down nav-section-arrow"></i></span>
              <ul class="nav-list">
                  <li class="nav-item has-dropdown">
@@ -63,7 +100,7 @@
                      </ul>
                  </li>
              </ul>
-         </div>
+         </div> -->
 
          <div class="nav-section">
              <span class="nav-section-label">Ecommerce<i class="icon-chevron-down nav-section-arrow"></i></span>
@@ -142,7 +179,7 @@
 
 
      <div class="sidebar-user" id="sidebarUserTrigger">
-         <img class="sidebar-user-avatar" src="images/logo.png" data-size="40" alt="LaceHarbor" />
+         <img class="sidebar-user-avatar" src="{{ asset('back-end/images/logo.png') }}" data-size="40" alt="LaceHarbor" />
          <div class="sidebar-user-info">
              <span class="sidebar-user-name">Laceharbor</span>
              <span class="sidebar-user-role">Super Admin</span>
@@ -152,7 +189,7 @@
          <div class="sidebar-profile-popup" id="sidebarProfilePopup">
              <div class="spp-header">
                  <div class="spp-avatar">
-                     <img class="avatar-gen-img" src="images/logo.png" data-size="40" alt="LaceHarbor" />
+                     <img class="avatar-gen-img" src="{{ asset('back-end/images/logo.png') }}" data-size="40" alt="LaceHarbor" />
                  </div>
                  <div class="spp-info">
                      <span class="spp-name">Laceharbor</span>
