@@ -15,50 +15,68 @@
          <div class="nav-section">
              <ul class="nav-list">
                  <li class="nav-item">
-                     <a href="index.html" class="nav-link">
+                     <a href="{{ route('backend.dashboard') }}"
+                         class="nav-link {{ request()->routeIs('backend.dashboard') ? 'active' : '' }}">
                          <i class="icon-shopping-bag nav-icon"></i>
                          <span class="nav-text">Dashboard</span>
                      </a>
                  </li>
-                 <li class="nav-item has-dropdown">
-                     <a href="#" class="nav-link nav-dropdown-toggle">
+
+                 <li class="nav-item has-dropdown {{ request()->routeIs('backend.edit-about-page') ? 'active' : '' }}">
+                     <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.edit-about-page') ? 'active' : '' }}">
                          <i class="icon-file nav-icon"></i>
                          <span class="nav-text">Static Pages</span>
                          <i class="icon-chevron-down nav-dropdown-arrow"></i>
                      </a>
+
                      <ul class="nav-dropdown-menu">
                          <li>
-                             <a href="about.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>About Us</a>
+                             <a href="{{ route('backend.edit-about-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-about-page') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>About Us
+                             </a>
                          </li>
+
                          <li>
-                             <a href="settings.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>Shipping & Delivery</a>
+                             <a href="settings.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                                 <span class="nav-sub-dot"></span>Shipping & Delivery
+                             </a>
                          </li>
+
                          <li>
-                             <a href="reports.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>Returns & Exchanges</a>
+                             <a href="reports.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                                 <span class="nav-sub-dot"></span>Returns & Exchanges
+                             </a>
                          </li>
+
                          <li>
-                             <a href="notifications-page.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>Contacts Us</a>
+                             <a href="notifications-page.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                                 <span class="nav-sub-dot"></span>Contacts Us
+                             </a>
                          </li>
+
                          <li>
-                             <a href="blank.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>Privacy Policy</a>
+                             <a href="blank.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                                 <span class="nav-sub-dot"></span>Privacy Policy
+                             </a>
                          </li>
+
                          <li>
-                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>Terms & Services</a>
+                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                                 <span class="nav-sub-dot"></span>Terms & Services
+                             </a>
                          </li>
+
                          <li>
-                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2"><span
-                                     class="nav-sub-dot"></span>Social Media</a>
+                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                                 <span class="nav-sub-dot"></span>Social Media
+                             </a>
                          </li>
                      </ul>
                  </li>
              </ul>
          </div>
+         
          <!-- <div class="nav-section">
              <span class="nav-section-label">Manage website Settings<i class="icon-chevron-down nav-section-arrow"></i></span>
              <ul class="nav-list">
@@ -106,7 +124,7 @@
              <span class="nav-section-label">Ecommerce<i class="icon-chevron-down nav-section-arrow"></i></span>
              <ul class="nav-list">
                  <li class="nav-item">
-                     <a href="ecommerce-dashboard.html" class="nav-link active">
+                     <a href="ecommerce-dashboard.html" class="nav-link">
                          <i class="icon-shopping-bag nav-icon"></i>
                          <span class="nav-text">Ecommerce Dashboard</span>
 
