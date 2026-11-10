@@ -38,25 +38,29 @@
                          </li>
 
                          <li>
-                             <a href="settings.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                             <a href="{{ route('backend.edit-shipping-delivery-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-shipping-delivery-page') ? 'active' : '' }}">
                                  <span class="nav-sub-dot"></span>Shipping & Delivery
                              </a>
                          </li>
 
                          <li>
-                             <a href="reports.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                             <a href="{{ route('backend.edit-returns-exchanges-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-returns-exchanges-page') ? 'active' : '' }}">
                                  <span class="nav-sub-dot"></span>Returns & Exchanges
                              </a>
                          </li>
 
                          <li>
-                             <a href="notifications-page.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                             <a href="{{ route('backend.edit-contact-us-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-contact-us-page') ? 'active' : '' }}">
                                  <span class="nav-sub-dot"></span>Contacts Us
                              </a>
                          </li>
 
                          <li>
-                             <a href="blank.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                             <a href="{{ route('backend.edit-privacy-policy-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-privacy-policy-page') ? 'active' : '' }}">
                                  <span class="nav-sub-dot"></span>Privacy Policy
                              </a>
                          </li>
