@@ -66,13 +66,15 @@
                          </li>
 
                          <li>
-                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
-                                 <span class="nav-sub-dot"></span>Terms & Services
+                             <a href="{{ route('backend.edit-terms-conditions-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-terms-conditions-page') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>Terms & Conditions
                              </a>
                          </li>
 
                          <li>
-                             <a href="all-pages.html" class="nav-link nav-sublink d-flex align-items-center gap-2">
+                             <a href="{{ route('backend.edit-social-media-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-social-media-page') ? 'active' : '' }}">
                                  <span class="nav-sub-dot"></span>Social Media
                              </a>
                          </li>

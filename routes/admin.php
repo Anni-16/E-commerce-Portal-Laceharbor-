@@ -27,4 +27,12 @@ Route::prefix('admin')->group(function () {
     Route::get('edit-privacy-policy-page', function () {
         return view('backend.staticpages.privacy-policy');
     })->name('backend.edit-privacy-policy-page');
+
+    Route::get('edit-terms-conditions-page', function () {
+        return view('backend.staticpages.terms-conditions');
+    })->name('backend.edit-terms-conditions-page');
+
+    Route::get('edit-social-media-page', function () {
+        return view('backend.staticpages.social-media');
+    })->name('backend.edit-social-media-page');
 });
