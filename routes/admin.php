@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Backend\AboutController;
 
 Route::prefix('admin')->group(function () {
 
@@ -10,13 +10,13 @@ Route::prefix('admin')->group(function () {
     })->name('backend.dashboard');
 
 
-// Static Pages Routes
+    // Static Pages Routes
+    // About Page
+    Route::get('edit-about-page', [AboutController::class, 'edit'])
+        ->name('backend.edit-about-page');
 
-Route::get('edit-about-page', [AboutController::class, 'edit'])
-    ->name('backend.edit-about-page');
-
-Route::post('edit-about-page', [AboutController::class, 'update'])
-    ->name('backend.about.update');
+    Route::put('about/update', [AboutController::class, 'update'])
+        ->name('backend.about.update');
 
     Route::get('edit-shipping-delivery-page', function () {
         return view('backend.staticpages.shipping-delivery');
