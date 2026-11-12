@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shipping_exchanges', function (Blueprint $table) {
+        Schema::create('shipping_delivery', function (Blueprint $table) {
             $table->id();
             $table->text('shipping_title');
             $table->text('shipping_date');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shipping_exchanges');
+        Schema::dropIfExists('shipping_delivery');
     }
 };

@@ -19,7 +19,7 @@
     </div>
 
     <div class="row g-4">
-        <form action="{{ route('backend.about.update') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('backend.shipping-delivery.update') }}" method="POST" enctype="multipart/form-data">
 
             @csrf
             @method('PUT')
@@ -45,7 +45,7 @@
                 </ul>
             </div>
             @endif
-            
+
             <!-- Content Section -->
             <div class="row">
                 <div class="col-lg-12">
@@ -59,16 +59,16 @@
 
                             <div class="form-group">
                                 <label class="form-label"> Title <span class="required">*</span></label>
-                                <input type="text" class="form-control-zentic" placeholder="Title " required>
+                                <input type="text" name="shipping_title" class="form-control-zentic" placeholder="Shipping Title" value="{{ old('shipping_title', $shipping->shipping_title) }}" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label"> Date <span class="required">*</span></label>
-                                <input type="text" class="form-control-zentic" placeholder=" Date " required>
+                                <input type="text" name="shipping_date" class="form-control-zentic" placeholder="Shipping Date" value="{{ old('shipping_date', $shipping->shipping_date) }}" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label">Description <span class="required">*</span></label>
-                                <textarea class="form-control-zentic" rows="5" placeholder="Description" required></textarea>
+                                <textarea class="form-control-zentic" name="shipping_description" rows="5" placeholder="Description" required>{{ old('shipping_description', $shipping->shipping_description) }}</textarea>
                             </div>
 
                         </div>
@@ -90,25 +90,24 @@
 
                             <div class="form-group">
                                 <label class="form-label">Meta Title <span class="required">*</span></label>
-                                <input type="text" class="form-control-zentic" placeholder="Meta Title" required>
+                                <input type="text" name="meta_title" class="form-control-zentic" placeholder="Meta Title" value="{{ old('meta_title', $shipping->meta_title) }}" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Meta Keywords <span class="required">*</span></label>
-                                <input type="text" class="form-control-zentic" placeholder="Meta Keywords" required>
+                                <input type="text" name="meta_keywords" class="form-control-zentic" placeholder="Meta Keywords" value="{{ old('meta_keywords', $shipping->meta_keywords) }}" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Meta Description <span class="required">*</span></label>
-                                <textarea class="form-control-zentic" rows="5" placeholder="Meta Description" required></textarea>
+                                <textarea class="form-control-zentic" name="meta_description" rows="5" placeholder="Meta Description" required>{{ old('meta_description', $shipping->meta_description) }}</textarea>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-2">
-                        <button class="btn-zentic btn-primary">Save Changes</button>
+                        <button type="submit" class="btn-zentic btn-primary"> Save Changes </button>
                     </div>
                     <div class="col-2">
                         <a href="{{ route('backend.dashboard') }}"><button class="btn-zentic btn-outline">Cancel</button></a>
