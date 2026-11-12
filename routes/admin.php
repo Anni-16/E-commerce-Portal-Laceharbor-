@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\ShippingController;
+use App\Http\Controllers\Backend\ReturnsController;
 
 Route::prefix('admin')->group(function () {
 
@@ -25,10 +26,11 @@ Route::prefix('admin')->group(function () {
     Route::put('shipping-delivery/update', [ShippingController::class, 'update'])
         ->name('backend.shipping-delivery.update');
 
-
-    Route::get('edit-returns-exchanges-page', function () {
-        return view('backend.staticpages.returns-exchanges');
-    })->name('backend.edit-returns-exchanges-page');
+    // Returns & Exchanges Page
+    Route::get('edit-returns-exchanges-page', [ReturnsController::class, 'edit'])
+        ->name('backend.edit-returns-exchanges-page');
+    Route::put('returns-exchanges/update', [ReturnsController::class, 'update'])
+        ->name('backend.returns-exchanges.update');
 
     Route::get('edit-contact-us-page', function () {
         return view('backend.staticpages.contact-us');
