@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\ShippingController;
 use App\Http\Controllers\Backend\ReturnsController;
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\PrivacyController;
 
 Route::prefix('admin')->group(function () {
 
@@ -39,9 +40,11 @@ Route::prefix('admin')->group(function () {
     Route::put('contact-us/update', [ContactController::class, 'update'])
         ->name('backend.contact-us.update');
 
-    Route::get('edit-privacy-policy-page', function () {
-        return view('backend.staticpages.privacy-policy');
-    })->name('backend.edit-privacy-policy-page');
+    // Privacy Policy Page
+    Route::get('edit-privacy-policy-page', [PrivacyController::class, 'edit'])
+        ->name('backend.edit-privacy-policy-page');
+    Route::put('privacy-policy/update', [PrivacyController::class, 'update'])
+        ->name('backend.privacy-policy.update');
 
     Route::get('edit-terms-conditions-page', function () {
         return view('backend.staticpages.terms-conditions');
