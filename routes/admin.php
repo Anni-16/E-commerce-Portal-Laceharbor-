@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\ShippingController;
 use App\Http\Controllers\Backend\ReturnsController;
+use App\Http\Controllers\Backend\ContactController;
 
 Route::prefix('admin')->group(function () {
 
@@ -13,7 +14,7 @@ Route::prefix('admin')->group(function () {
 
 
     // Static Pages Routes
-    
+
     // About Page
     Route::get('edit-about-page', [AboutController::class, 'edit'])
         ->name('backend.edit-about-page');
@@ -32,9 +33,11 @@ Route::prefix('admin')->group(function () {
     Route::put('returns-exchanges/update', [ReturnsController::class, 'update'])
         ->name('backend.returns-exchanges.update');
 
-    Route::get('edit-contact-us-page', function () {
-        return view('backend.staticpages.contact-us');
-    })->name('backend.edit-contact-us-page');
+    // Contact Us Page
+    Route::get('edit-contact-us-page', [ContactController::class, 'edit'])
+        ->name('backend.edit-contact-us-page');
+    Route::put('contact-us/update', [ContactController::class, 'update'])
+        ->name('backend.contact-us.update');
 
     Route::get('edit-privacy-policy-page', function () {
         return view('backend.staticpages.privacy-policy');
