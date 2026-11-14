@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\ReturnsController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\PrivacyController;
 use App\Http\Controllers\Backend\TermsController;
+use App\Http\Controllers\Backend\SocialMediaController;
 
 Route::prefix('admin')->group(function () {
 
@@ -53,8 +54,10 @@ Route::prefix('admin')->group(function () {
     Route::put('terms-conditions/update', [TermsController::class, 'update'])
         ->name('backend.terms-conditions.update');
 
+    // Social Media Page
+    Route::get('edit-social-media-page', [SocialMediaController::class, 'edit'])
+        ->name('backend.edit-social-media-page');
+    Route::put('social-media/update', [SocialMediaController::class, 'update'])
+        ->name('backend.social-media.update');
 
-    Route::get('edit-social-media-page', function () {
-        return view('backend.staticpages.social-media');
-    })->name('backend.edit-social-media-page');
 });
