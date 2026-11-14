@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\ShippingController;
 use App\Http\Controllers\Backend\ReturnsController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\PrivacyController;
+use App\Http\Controllers\Backend\TermsController;
 
 Route::prefix('admin')->group(function () {
 
@@ -46,9 +47,12 @@ Route::prefix('admin')->group(function () {
     Route::put('privacy-policy/update', [PrivacyController::class, 'update'])
         ->name('backend.privacy-policy.update');
 
-    Route::get('edit-terms-conditions-page', function () {
-        return view('backend.staticpages.terms-conditions');
-    })->name('backend.edit-terms-conditions-page');
+    // Terms and Conditions Page
+    Route::get('edit-terms-conditions-page', [TermsController::class, 'edit'])
+        ->name('backend.edit-terms-conditions-page');
+    Route::put('terms-conditions/update', [TermsController::class, 'update'])
+        ->name('backend.terms-conditions.update');
+
 
     Route::get('edit-social-media-page', function () {
         return view('backend.staticpages.social-media');
