@@ -60,4 +60,20 @@ Route::prefix('admin')->group(function () {
     Route::put('social-media/update', [SocialMediaController::class, 'update'])
         ->name('backend.social-media.update');
 
+    // Manage Blogs Pages Routes
+    Route::get('manage-blogs', function () {
+        return view('backend.blogs.index');
+    })->name('backend.manage-blogs');
+
+    Route::get('view-blog', function () {
+        return view('backend.blogs.view-blog');
+    })->name('backend.view-blog');
+
+    Route::get('add-blog', function () {
+        return view('backend.blogs.add-blog');
+    })->name('backend.add-blog');
+
+    Route::get('edit-blog', function () {
+        return view('backend.blogs.edit-blog');
+    })->name('backend.edit-blog');
 });

@@ -80,9 +80,17 @@
                          </li>
                      </ul>
                  </li>
+                 <li class="nav-item">
+                     <a href="{{ route('backend.manage-blogs') }}"
+                         class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">
+                          <i class="icon-message-square nav-icon"></i>
+                         <span class="nav-text">Manage Blogs</span>
+                     </a>
+                 </li>
+
              </ul>
          </div>
-         
+
          <!-- <div class="nav-section">
              <span class="nav-section-label">Manage website Settings<i class="icon-chevron-down nav-section-arrow"></i></span>
              <ul class="nav-list">

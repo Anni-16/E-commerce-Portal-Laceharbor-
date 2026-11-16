@@ -6,5 +6,6 @@
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/bootstrap.min.css') }}" id="bootstrapLtr">
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/bootstrap.rtl.min.css') }}" id="bootstrapRtl" disabled>
+<link rel="stylesheet" href="{{ asset('back-end/assets/css/dataTables.bootstrap5.min.css') }}">
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/zentic.css') }}">
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/zentic-icons.css') }}">
