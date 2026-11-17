@@ -20,8 +20,33 @@
 
     <div class="row g-4">
 
-        <form action="#" method="POST" enctype="multipart/form-data">
-            <!-- Banner Section -->
+        <form action="{{ route('backend.store-blog') }}" method="POST" enctype="multipart/form-data">
+
+            @csrf
+
+            @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+
+            @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+            @endif
+
+            @if($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
+            <!-- Blog Content Section -->
             <div class="row">
                 <div class="col-lg-8">
                     <div class="zentic-card mb-4">
@@ -34,14 +59,14 @@
                         <div class="zentic-card-body">
                             <div class="form-group">
                                 <label class="form-label"> Blog Title <span class="required">*</span> </label>
-                                <input type="text" name="blog_title" class="form-control-zentic" placeholder="Blog Title" value="" required>
+                                <input type="text" name="blog_title" class="form-control-zentic" placeholder="Blog Title" value="{{ old('blog_title') }}" required>
                             </div>
 
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-6">
                                         <label class="form-label"> Blog URl's <span class="required">*</span> </label>
-                                        <input type="text" name="blog_url" id="blog_url" class="form-control-zentic" placeholder="Blog URL" value="" required>
+                                        <input type="text" name="blog_url" id="blog_url" class="form-control-zentic" placeholder="Blog URL" value="{{ old('blog_url') }}" required>
                                         <span class="pt-2" style="color:grey;font-size:14px;"> Example: /blog/my-blog-post</span>
                                     </div>
                                     <div class="col-6">
@@ -55,18 +80,18 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <label class="form-label"> Blog Date <span class="required">*</span> </label>
-                                        <input type="text" name="blog_date" class="form-control-zentic" placeholder="Blog Date" value="" required>
+                                        <input type="text" name="blog_date" class="form-control-zentic" placeholder="Blog Date" value="{{ old('blog_date') }}" required>
                                     </div>
                                     <div class="col-6">
                                         <label class="form-label"> Blog Images Alt Text <span class="required">*</span> </label>
-                                        <input type="text" name="blog_alt_text" class="form-control-zentic" placeholder="Blog Images Alt Text" value="" required>
+                                        <input type="text" name="blog_alt_text" class="form-control-zentic" placeholder="Blog Images Alt Text" value="{{ old('blog_alt_text') }}" required>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label"> Blog Description <span class="required">*</span> </label>
-                                <textarea name="blog_description" class="form-control-zentic" rows="5" placeholder="Blog Description" required></textarea>
+                                <textarea name="blog_description" class="form-control-zentic" rows="5" placeholder="Blog Description" required>{{ old('blog_description') }}</textarea>
                             </div>
 
                             <div class="form-group">
@@ -75,7 +100,7 @@
                                 </span>
 
                                 <label class="toggle-switch flex-shrink-0">
-                                    <input type="checkbox" checked required>
+                                    <input type="checkbox" name="blog_status" value="1" checked>
                                     <span class="toggle-slider"></span>
                                 </label>
 
@@ -94,7 +119,7 @@
                         </div>
                         <div class="zentic-card-body">
                             <div class="text-center mb-3">
-                                <img id="bannerImagePreview" src="{{ asset('back-end/images/LaceHarbor.png') }}" alt="Banner Image" class="rounded-3 border zc-add-image" style="max-width:100%;">
+                                <img id="bannerImagePreview" src="{{ asset('back-end/images/no_images.svg') }}" alt="Banner Image" class="rounded-3 border zc-add-image" style="max-width:100%;">
                             </div>
                             <div class="file-upload-zone mb-3">
                                 <input type="file" name="banner_image" accept="image/jpeg,image/png,image/webp" id="bannerImageUpload" class="gallery-upload-input" data-preview="bannerImagePreview">
@@ -128,17 +153,17 @@
                         <div class="zentic-card-body">
                             <div class="form-group">
                                 <label class="form-label"> Meta Title <span class="required">*</span> </label>
-                                <input type="text" name="meta_title" class="form-control-zentic" placeholder="Meta Title" value="" required>
+                                <input type="text" name="meta_title" class="form-control-zentic" placeholder="Meta Title" value="{{ old('meta_title') }}" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label"> Meta Keywords <span class="required">*</span> </label>
-                                <input type="text" name="meta_keywords" class="form-control-zentic" placeholder="Meta Keywords" value="" required>
+                                <input type="text" name="meta_keywords" class="form-control-zentic" placeholder="Meta Keywords" value="{{ old('meta_keywords') }}" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label"> Meta Description <span class="required">*</span> </label>
-                                <textarea name="meta_description" class="form-control-zentic" rows="5" placeholder="Meta Description" required></textarea>
+                                <textarea name="meta_description" class="form-control-zentic" rows="5" placeholder="Meta Description" required>{{ old('meta_description') }}</textarea>
                             </div>
                         </div>
                     </div>

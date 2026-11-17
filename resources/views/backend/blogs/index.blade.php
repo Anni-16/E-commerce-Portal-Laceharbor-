@@ -20,6 +20,28 @@
         </div>
     </div>
 
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
+    @if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
+
+    @if($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
     <div class="zentic-card mb-4">
         <div class="zentic-card-body">
             <div class="zentic-table-wrapper">
@@ -37,20 +59,54 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @forelse($blogs as $key => $blog)
                         <tr>
-                            <td class="mono fw-600">1</td>
-                            <td>Blog 1</td>
-                            <td><img src="{{ asset('back-end/images/LaceHarbor.png') }}" alt="" style="width: 50px; height: 50px; object-fit: cover;"></td>
-                            <td>Blog 1 Description</td>
-                            <td>Nov 30, 2026</td>
-                            <td><a href="https://laceharbor.com/blogs/blog-1" target="_blank" rel="noopener noreferrer">https://laceharbor.com/blogs/blog-1</a></td>
-                            <td><span class="badge-zentic badge-green badge-dot">Success</span></td>
+                            <td class="mono fw-600">{{ $key + 1 }}</td>
+                            <td>{{ $blog->blog_title }}</td>
                             <td>
-                                <a href="{{ route('backend.view-blog') }}"><button class="btn-zentic btn-warning btn-icon"><i class="icon-eye"></i></button></a>
-                                <a href="{{ route('backend.edit-blog') }}"><button class="btn-zentic btn-success btn-icon"><i class="icon-pencil"></i></button></a>
-                                <button type="button" class="btn-zentic btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="icon-trash-2"></i></button>
+                                @if($blog->blog_image)
+                                <img src="{{ asset($blog->blog_image) }}"
+                                    alt="{{ $blog->blog_alt_tag }}"
+                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                @else
+                                <img src="{{ asset('back-end/images/no_images.svg') }}"
+                                    alt="No Images"
+                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                @endif
+                            </td>
+                            <td>{{ $blog->blog_description }}</td>
+                            <td>{{ $blog->blog_date }}</td>
+                            <td>
+                                <a href="https://laceharbor.com/blogs/{{ $blog->blog_url }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    {{ $blog->blog_url }}
+                                </a>
+                            </td>
+
+                            <td>
+                                @if($blog->blog_status == 1)
+                                <span class="badge-zentic badge-green badge-dot">Active</span>
+                                @else
+                                <span class="badge-zentic badge-dot badge-red">Inactive</span>
+                                @endif
+                            </td>
+
+                            <td>
+                                <a href="{{ route('backend.view-blog', $blog->id) }}"> <button class="btn-zentic btn-warning btn-icon"><i class="icon-eye"></i></button></a>
+                                <a href="{{ route('backend.edit-blog', $blog->id) }}"><button class="btn-zentic btn-success btn-icon"><i class="icon-pencil"></i></button> </a>
+                                <button type="button" class="btn-zentic btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $blog->id }}"><i class="icon-trash-2"></i></button>
                             </td>
                         </tr>
+                        @empty
+                        <tr>
+                            <td colspan="8" class="text-center">
+                                No Blogs Data Is Found
+                            </td>
+                        </tr>
+                        @endforelse
+
                     </tbody>
                 </table>
             </div>
@@ -60,7 +116,10 @@
 
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+
+@foreach($blogs as $blog)
+
+<div class="modal fade" id="deleteModal{{ $blog->id }}" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
@@ -79,18 +138,30 @@
             </div>
 
             <div class="modal-footer justify-content-center">
+
                 <button type="button" class="btn btn-secondary"
                     data-bs-dismiss="modal">
                     Cancel
                 </button>
 
-                <button type="button" class="btn btn-danger">
-                    Yes, Delete
-                </button>
+                <form action="{{ route('backend.delete-blog', $blog->id) }}"
+                    method="POST">
+
+                    @csrf
+                    @method('DELETE')
+
+                    <button type="submit" class="btn btn-danger">
+                        Yes, Delete
+                    </button>
+
+                </form>
+
             </div>
 
         </div>
     </div>
 </div>
+
+@endforeach
 
 @endsection

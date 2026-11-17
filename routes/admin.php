@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\PrivacyController;
 use App\Http\Controllers\Backend\TermsController;
 use App\Http\Controllers\Backend\SocialMediaController;
+use App\Http\Controllers\Backend\BlogsController;
 
 Route::prefix('admin')->group(function () {
 
@@ -61,19 +62,18 @@ Route::prefix('admin')->group(function () {
         ->name('backend.social-media.update');
 
     // Manage Blogs Pages Routes
-    Route::get('manage-blogs', function () {
-        return view('backend.blogs.index');
-    })->name('backend.manage-blogs');
-
-    Route::get('view-blog', function () {
-        return view('backend.blogs.view-blog');
-    })->name('backend.view-blog');
-
-    Route::get('add-blog', function () {
-        return view('backend.blogs.add-blog');
-    })->name('backend.add-blog');
-
-    Route::get('edit-blog', function () {
-        return view('backend.blogs.edit-blog');
-    })->name('backend.edit-blog');
+    Route::get('/manage-blogs', [BlogsController::class, 'index'])
+        ->name('backend.manage-blogs');
+    Route::get('/view-blog/{id}', [BlogsController::class, 'viewBlog'])
+        ->name('backend.view-blog');
+    Route::get('/add-blog', [BlogsController::class, 'addBlog'])
+        ->name('backend.add-blog');
+    Route::post('/store-blog', [BlogsController::class, 'storeBlog'])
+        ->name('backend.store-blog');
+    Route::get('/edit-blog/{id}', [BlogsController::class, 'editBlog'])
+        ->name('backend.edit-blog');
+    Route::put('/update-blog/{id}', [BlogsController::class, 'updateBlog'])
+        ->name('backend.update-blog');
+    Route::delete('/delete-blog/{id}', [BlogsController::class, 'deleteBlog'])
+        ->name('backend.delete-blog');
 });
