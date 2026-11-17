@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\ShippingController;
 use App\Http\Controllers\Backend\ReturnsController;
 use App\Http\Controllers\Backend\ContactController;
@@ -60,6 +61,23 @@ Route::prefix('admin')->group(function () {
         ->name('backend.edit-social-media-page');
     Route::put('social-media/update', [SocialMediaController::class, 'update'])
         ->name('backend.social-media.update');
+
+    // Manage Banner Pages Routes
+    Route::get('manage-banner', [BannerController::class, 'index'])
+        ->name('backend.manage-banner');
+    Route::get('/add-banner', [BannerController::class, 'addBanner'])
+        ->name('backend.add-banner');
+    Route::post('/store-banner', [BannerController::class, 'storeBanner'])
+        ->name('backend.store-banner');
+    Route::get('/view-banner/{id}', [BannerController::class, 'viewBanner'])
+        ->name('backend.view-banner');
+        Route::get('/edit-banner/{id}', [BannerController::class, 'editBanner'])
+        ->name('backend.edit-banner');
+    Route::put('/update-banner/{id}', [BannerController::class, 'updateBanner'])
+        ->name('backend.update-banner');
+    Route::delete('/delete-banner/{id}', [BannerController::class, 'deleteBanner'])
+        ->name('backend.delete-banner');
+
 
     // Manage Blogs Pages Routes
     Route::get('/manage-blogs', [BlogsController::class, 'index'])

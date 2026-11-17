@@ -6,7 +6,7 @@
 
     <div class="page-header">
         <div>
-            <h1 class="page-title pb-2">Edit About Page</h1>
+            <h1 class="page-title pb-2">Manage Blogs Page</h1>
             <nav>
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="{{ route('backend.dashboard') }}"><i class="icon-house"></i></a></li>

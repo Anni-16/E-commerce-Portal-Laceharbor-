@@ -35,13 +35,11 @@ class BlogsController extends Controller
         return view('backend.blogs.index', compact('blogs'));
     }
 
-
     // Add Blog Page
     public function addBlog()
     {
         return view('backend.blogs.add-blog');
     }
-
 
     // Store Blog
     public function storeBlog(Request $request)
@@ -53,7 +51,7 @@ class BlogsController extends Controller
             'blog_date'         => 'required|date',
             'blog_alt_text'     => 'required|string|',
             'blog_description'  => 'required|string',
-            'banner_image'      => 'nullable|image|mimes:jpeg,jpg,png,webp|max:1024',
+            'blog_image'      => 'nullable|image|mimes:jpeg,jpg,png,webp|max:1024',
             'meta_title'        => 'required|string|',
             'meta_keywords'     => 'required|string',
             'meta_description'  => 'required|string',
@@ -62,9 +60,9 @@ class BlogsController extends Controller
         // Upload Blog Image
         $imagePath = null;
 
-        if ($request->hasFile('banner_image')) {
+        if ($request->hasFile('blog_image')) {
 
-            $image = $request->file('banner_image');
+            $image = $request->file('blog_image');
 
             $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
 
@@ -102,8 +100,6 @@ class BlogsController extends Controller
             ->with('success', 'Blog added successfully!');
     }
 
-
-
     // View Blog
     public function viewBlog($id)
     {
@@ -120,7 +116,6 @@ class BlogsController extends Controller
         return view('backend.blogs.edit-blog', compact('blog'));
     }
 
-
     // Update Blog
     public function updateBlog(Request $request, $id)
     {
@@ -133,7 +128,7 @@ class BlogsController extends Controller
             'blog_date'        => 'required|date',
             'blog_alt_text'    => 'required|string',
             'blog_description' => 'required|string',
-            'banner_image'     => 'nullable|image|mimes:jpeg,jpg,png,webp|max:1024',
+            'blog_image'     => 'nullable|image|mimes:jpeg,jpg,png,webp|max:1024',
             'meta_title'       => 'required|string',
             'meta_keywords'    => 'required|string',
             'meta_description' => 'required|string',
@@ -143,9 +138,9 @@ class BlogsController extends Controller
         $imagePath = $blog->blog_image;
 
         // Upload new image if selected
-        if ($request->hasFile('banner_image')) {
+        if ($request->hasFile('blog_image')) {
 
-            $image = $request->file('banner_image');
+            $image = $request->file('blog_image');
 
             $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
 
@@ -184,8 +179,6 @@ class BlogsController extends Controller
         return redirect()->route('backend.manage-blogs')
             ->with('success', 'Blog updated successfully!');
     }
-
-
 
     // Delete Blog
     public function deleteBlog($id)

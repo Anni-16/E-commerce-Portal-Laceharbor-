@@ -81,7 +81,7 @@
                 <div class="zentic-card">
                     <div class="zentic-card-header">
                         <h2 class="card-title mb-0">
-                            <i class="icon-image"></i> Banner Image
+                            <i class="icon-image"></i> Blog Image
                         </h2>
                     </div>
                     <div class="zentic-card-body">

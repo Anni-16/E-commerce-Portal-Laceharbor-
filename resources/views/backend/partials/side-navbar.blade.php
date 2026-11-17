@@ -81,9 +81,16 @@
                      </ul>
                  </li>
                  <li class="nav-item">
+                     <a href="{{ route('backend.manage-banner') }}"
+                         class="nav-link {{ request()->routeIs('backend.manage-banner') ? 'active' : '' }}">
+                         <i class="icon-images nav-icon"></i>
+                         <span class="nav-text">Manage Banner</span>
+                     </a>
+                 </li>
+                 <li class="nav-item">
                      <a href="{{ route('backend.manage-blogs') }}"
                          class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">
-                          <i class="icon-message-square nav-icon"></i>
+                         <i class="icon-message-square nav-icon"></i>
                          <span class="nav-text">Manage Blogs</span>
                      </a>
                  </li>

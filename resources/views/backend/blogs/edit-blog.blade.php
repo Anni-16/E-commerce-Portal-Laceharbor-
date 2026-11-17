@@ -114,7 +114,7 @@
                     <div class="zentic-card">
                         <div class="zentic-card-header">
                             <h2 class="card-title mb-0">
-                                <i class="icon-image"></i> Banner Image
+                                <i class="icon-image"></i> Blog Image
                             </h2>
                         </div>
                         <div class="zentic-card-body">
@@ -122,7 +122,7 @@
                                 <img id="bannerImagePreview" src="{{ $blog->blog_image ? asset($blog->blog_image) : asset('back-end/images/no_images.svg') }}" alt="{{ $blog->blog_alt_tag }}" class="rounded-3 border zc-add-image" style="max-width:100%;">
                             </div>
                             <div class="file-upload-zone mb-3">
-                                <input type="file" name="banner_image" accept="image/jpeg,image/png,image/webp" id="bannerImageUpload" class="gallery-upload-input" data-preview="bannerImagePreview">
+                                <input type="file" name="blog_image" accept="image/jpeg,image/png,image/webp" id="bannerImageUpload" class="gallery-upload-input" data-preview="bannerImagePreview">
                                 <div class="file-upload-icon">
                                     <i class="icon-image-up"></i>
                                 </div>
