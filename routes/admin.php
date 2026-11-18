@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\PrivacyController;
 use App\Http\Controllers\Backend\TermsController;
 use App\Http\Controllers\Backend\SocialMediaController;
 use App\Http\Controllers\Backend\BlogsController;
+use App\Http\Controllers\Backend\FAQCategoryController;
 
 Route::prefix('admin')->group(function () {
 
@@ -94,4 +95,14 @@ Route::prefix('admin')->group(function () {
         ->name('backend.update-blog');
     Route::delete('/delete-blog/{id}', [BlogsController::class, 'deleteBlog'])
         ->name('backend.delete-blog');
+
+    // Manage FAQ's Categories Pages Routes
+    Route::get('/manage-faq-categories', [FAQCategoryController::class, 'index'])
+        ->name('backend.manage-faq-categories');
+    Route::post('/faq-categories', [FAQCategoryController::class, 'store'])
+        ->name('backend.faq-categories.store');
+    Route::put('/faq-categories/{id}', [FAQCategoryController::class, 'update'])
+        ->name('backend.faq-categories.update');
+    Route::delete('/faq-categories/{id}', [FAQCategoryController::class, 'destroy'])
+        ->name('backend.faq-categories.destroy');
 });

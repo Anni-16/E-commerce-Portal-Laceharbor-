@@ -87,6 +87,29 @@
                          <span class="nav-text">Manage Banner</span>
                      </a>
                  </li>
+                 <li class="nav-item has-dropdown {{ request()->routeIs('backend.mange-faq-categories') ? 'active' : '' }}">
+                     <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.manage-faq-categories') ? 'active' : '' }}">
+                         <i class="icon-file nav-icon"></i>
+                         <span class="nav-text">Manage FAQ's</span>
+                         <i class="icon-chevron-down nav-dropdown-arrow"></i>
+                     </a>
+
+                     <ul class="nav-dropdown-menu">
+                         <li>
+                             <a href="{{ route('backend.manage-faq-categories') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.manage-faq-categories') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>Add Categories
+                             </a>
+                         </li>
+
+                         <li>
+                             <a href="{{ route('backend.edit-shipping-delivery-page') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-shipping-delivery-page') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>Shipping & Delivery
+                             </a>
+                         </li>
+                     </ul>
+                 </li>
                  <li class="nav-item">
                      <a href="{{ route('backend.manage-blogs') }}"
                          class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">
