@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\TermsController;
 use App\Http\Controllers\Backend\SocialMediaController;
 use App\Http\Controllers\Backend\BlogsController;
 use App\Http\Controllers\Backend\FAQCategoryController;
+use App\Http\Controllers\Backend\FAQController;
 
 Route::prefix('admin')->group(function () {
 
@@ -108,18 +109,18 @@ Route::prefix('admin')->group(function () {
 
 
     // Manage FAQ'S Pages Routes
-    Route::get('/manage-faq', [BlogsController::class, 'index'])
+    Route::get('/manage-faq', [FAQController::class, 'index'])
         ->name('backend.manage-faq');
-    Route::get('/view-blog/{id}', [BlogsController::class, 'viewBlog'])
-        ->name('backend.view-blog');
-    Route::get('/add-blog', [BlogsController::class, 'addBlog'])
-        ->name('backend.add-blog');
-    Route::post('/store-blog', [BlogsController::class, 'storeBlog'])
-        ->name('backend.store-blog');
-    Route::get('/edit-blog/{id}', [BlogsController::class, 'editBlog'])
-        ->name('backend.edit-blog');
-    Route::put('/update-blog/{id}', [BlogsController::class, 'updateBlog'])
-        ->name('backend.update-blog');
-    Route::delete('/delete-blog/{id}', [BlogsController::class, 'deleteBlog'])
-        ->name('backend.delete-blog');
+    Route::get('/view-faq/{id}', [FAQController::class, 'viewFaq'])
+        ->name('backend.view-faq');
+    Route::get('/add-faq', [FAQController::class, 'addFaq'])
+        ->name('backend.add-faq');
+    Route::post('/store-faq', [FAQController::class, 'storeFaq'])
+        ->name('backend.store-faq');
+    Route::get('/edit-faq/{id}', [FAQController::class, 'editFaq'])
+        ->name('backend.edit-faq');
+    Route::put('/update-faq/{id}', [FAQController::class, 'updateFaq'])
+        ->name('backend.update-faq');
+    Route::delete('/delete-faq/{id}', [FAQController::class, 'deleteFaq'])
+        ->name('backend.delete-faq');
 });
