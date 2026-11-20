@@ -12,4 +12,9 @@ class FAQCategory extends Model
         'faq_cat_name',
         'status',
     ];
+
+    public function faqs()
+    {
+        return $this->hasMany(Faq::class);
+    }
 }

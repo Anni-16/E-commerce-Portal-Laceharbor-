@@ -72,7 +72,7 @@ Route::prefix('admin')->group(function () {
         ->name('backend.store-banner');
     Route::get('/view-banner/{id}', [BannerController::class, 'viewBanner'])
         ->name('backend.view-banner');
-        Route::get('/edit-banner/{id}', [BannerController::class, 'editBanner'])
+    Route::get('/edit-banner/{id}', [BannerController::class, 'editBanner'])
         ->name('backend.edit-banner');
     Route::put('/update-banner/{id}', [BannerController::class, 'updateBanner'])
         ->name('backend.update-banner');
@@ -105,4 +105,21 @@ Route::prefix('admin')->group(function () {
         ->name('backend.faq-categories.update');
     Route::delete('/faq-categories/{id}', [FAQCategoryController::class, 'destroy'])
         ->name('backend.faq-categories.destroy');
+
+
+    // Manage FAQ'S Pages Routes
+    Route::get('/manage-faq', [BlogsController::class, 'index'])
+        ->name('backend.manage-faq');
+    Route::get('/view-blog/{id}', [BlogsController::class, 'viewBlog'])
+        ->name('backend.view-blog');
+    Route::get('/add-blog', [BlogsController::class, 'addBlog'])
+        ->name('backend.add-blog');
+    Route::post('/store-blog', [BlogsController::class, 'storeBlog'])
+        ->name('backend.store-blog');
+    Route::get('/edit-blog/{id}', [BlogsController::class, 'editBlog'])
+        ->name('backend.edit-blog');
+    Route::put('/update-blog/{id}', [BlogsController::class, 'updateBlog'])
+        ->name('backend.update-blog');
+    Route::delete('/delete-blog/{id}', [BlogsController::class, 'deleteBlog'])
+        ->name('backend.delete-blog');
 });

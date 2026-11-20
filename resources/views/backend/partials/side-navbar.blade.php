@@ -105,7 +105,7 @@
                          <li>
                              <a href="{{ route('backend.edit-shipping-delivery-page') }}"
                                  class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-shipping-delivery-page') ? 'active' : '' }}">
-                                 <span class="nav-sub-dot"></span>Shipping & Delivery
+                                 <span class="nav-sub-dot"></span>Add FAQ's
                              </a>
                          </li>
                      </ul>
