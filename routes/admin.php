@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\SocialMediaController;
 use App\Http\Controllers\Backend\BlogsController;
 use App\Http\Controllers\Backend\FAQCategoryController;
 use App\Http\Controllers\Backend\FAQController;
+use App\Http\Controllers\Backend\MetaSeoController;
 
 Route::prefix('admin')->group(function () {
 
@@ -123,4 +124,12 @@ Route::prefix('admin')->group(function () {
         ->name('backend.update-faq');
     Route::delete('/delete-faq/{id}', [FAQController::class, 'deleteFaq'])
         ->name('backend.delete-faq');
+
+
+    // Manage SEO Setting
+    // All Pages SEO
+    Route::get('edit-all-pages-seo', [MetaSeoController::class, 'edit'])
+        ->name('backend.edit-all-pages-seo');
+    Route::put('meta-seo/update', [MetaSeoController::class, 'update'])
+        ->name('backend.meta-seo.update');
 });

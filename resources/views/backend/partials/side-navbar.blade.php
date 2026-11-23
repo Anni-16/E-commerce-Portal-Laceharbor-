@@ -110,6 +110,23 @@
                          </li>
                      </ul>
                  </li>
+                 <li class="nav-item has-dropdown {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
+                     <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
+                         <i class="fa-solid fa-magnifying-glass-chart nav-icon"></i>
+                         <span class="nav-text">Manage SEO Setting</span>
+                         <i class="icon-chevron-down nav-dropdown-arrow"></i>
+                     </a>
+
+                     <ul class="nav-dropdown-menu">
+                         <li>
+                             <a href="{{ route('backend.edit-all-pages-seo') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>All Pages SEO 
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
                  <li class="nav-item">
                      <a href="{{ route('backend.manage-blogs') }}"
                          class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">

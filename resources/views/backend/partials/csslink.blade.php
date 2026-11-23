@@ -9,3 +9,5 @@
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/dataTables.bootstrap5.min.css') }}">
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/zentic.css') }}">
 <link rel="stylesheet" href="{{ asset('back-end/assets/css/zentic-icons.css') }}">
+<!-- fontawsome Icons Cnd Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">

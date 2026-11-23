@@ -68,16 +68,13 @@
                             <td>{{ $faq->question }}</td>
                             <td>{{ \Illuminate\Support\Str::limit(strip_tags($faq->answer), 100) }}</td>
                             <td>
-                                <a href="{{ route('backend.view-faq', $faq->id) }}"><button class="btn-zentic btn-warning btn-icon"><i class="icon-eye"></i></button></i></a>
+                                <a href="{{ route('backend.view-faq', $faq->id) }}"><button class="btn-zentic btn-warning btn-icon"><i class="icon-eye"></i></button></a>
                                 <a href="{{ route('backend.edit-faq', $faq->id) }}"><button class="btn-zentic btn-success btn-icon"><i class="icon-pencil"></i></button></a>
-                                <button type="button" class="btn-zentic btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ $faq->id }}"><i class="icon-trash-2"></i> </button>
+                                <button type="button" class="btn-zentic btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ $faq->id }}"><i class="icon-trash-2"></i></button>
                             </td>
                         </tr>
 
                         @empty
-                        <tr>
-                            <td colspan="5" class="text-center"> No FAQs Found. </td>
-                        </tr>
                         @endforelse
 
                     </tbody>
