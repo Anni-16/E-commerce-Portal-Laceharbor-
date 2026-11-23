@@ -110,6 +110,14 @@
                          </li>
                      </ul>
                  </li>
+                 <li class="nav-item">
+                     <a href="{{ route('backend.manage-blogs') }}"
+                         class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">
+                         <i class="icon-message-square nav-icon"></i>
+                         <span class="nav-text">Manage Blogs</span>
+                     </a>
+                 </li>
+
                  <li class="nav-item has-dropdown {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
                      <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
                          <i class="fa-solid fa-magnifying-glass-chart nav-icon"></i>
@@ -121,18 +129,17 @@
                          <li>
                              <a href="{{ route('backend.edit-all-pages-seo') }}"
                                  class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
-                                 <span class="nav-sub-dot"></span>All Pages SEO 
+                                 <span class="nav-sub-dot"></span>All Pages SEO
+                             </a>
+                         </li>
+                         <li>
+                             <a href="{{ route('backend.edit-gtm-tag') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-gtm-tag') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>GTM Tag
                              </a>
                          </li>
 
                      </ul>
-                 </li>
-                 <li class="nav-item">
-                     <a href="{{ route('backend.manage-blogs') }}"
-                         class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">
-                         <i class="icon-message-square nav-icon"></i>
-                         <span class="nav-text">Manage Blogs</span>
-                     </a>
                  </li>
 
              </ul>
