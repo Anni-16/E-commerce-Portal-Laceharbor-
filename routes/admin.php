@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\FAQCategoryController;
 use App\Http\Controllers\Backend\FAQController;
 use App\Http\Controllers\Backend\GtmTagController;
 use App\Http\Controllers\Backend\MetaSeoController;
+use App\Http\Controllers\Backend\StateController;
 
 Route::prefix('admin')->group(function () {
 
@@ -151,5 +152,13 @@ Route::prefix('admin')->group(function () {
         ->name('backend.manage-country.update');
     Route::delete('/manage-country/{id}', [CountryController::class, 'destroy'])
         ->name('backend.manage-country.destroy');
-
+    // For State
+    Route::get('/manage-state', [StateController::class, 'index'])
+        ->name('backend.manage-state');
+    Route::post('/manage-state', [StateController::class, 'store'])
+        ->name('backend.manage-state.store');
+    Route::put('/manage-state/{id}', [StateController::class, 'update'])
+        ->name('backend.manage-state.update');
+    Route::delete('/manage-state/{id}', [StateController::class, 'destroy'])
+        ->name('backend.manage-state.destroy');
 });

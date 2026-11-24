@@ -157,9 +157,9 @@
                              </a>
                          </li>
                          <li>
-                             <a href="{{ route('backend.edit-gtm-tag') }}"
-                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-gtm-tag') ? 'active' : '' }}">
-                                 <span class="nav-sub-dot"></span>GTM Tag
+                             <a href="{{ route('backend.manage-state') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.manage-state') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>Add State 
                              </a>
                          </li>
 
