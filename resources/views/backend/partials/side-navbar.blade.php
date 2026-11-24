@@ -162,6 +162,12 @@
                                  <span class="nav-sub-dot"></span>Add State 
                              </a>
                          </li>
+                         <li>
+                             <a href="{{ route('backend.general-setting') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.general-setting') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>General Setting 
+                             </a>
+                         </li>
 
                      </ul>
                  </li>

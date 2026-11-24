@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\FAQController;
 use App\Http\Controllers\Backend\GtmTagController;
 use App\Http\Controllers\Backend\MetaSeoController;
 use App\Http\Controllers\Backend\StateController;
+use App\Http\Controllers\Backend\GeneralSettingController;
 
 Route::prefix('admin')->group(function () {
 
@@ -161,4 +162,9 @@ Route::prefix('admin')->group(function () {
         ->name('backend.manage-state.update');
     Route::delete('/manage-state/{id}', [StateController::class, 'destroy'])
         ->name('backend.manage-state.destroy');
+    // General Setting
+    Route::get('general-setting', [GeneralSettingController::class, 'edit'])
+        ->name('backend.general-setting');
+    Route::put('general-setting/update', [GeneralSettingController::class, 'update'])
+        ->name('backend.general-setting.update');
 });
