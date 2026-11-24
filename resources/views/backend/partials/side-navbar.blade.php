@@ -142,6 +142,30 @@
                      </ul>
                  </li>
 
+                 <li class="nav-item has-dropdown {{ request()->routeIs('backend.add-country') ? 'active' : '' }}">
+                     <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.add-country') ? 'active' : '' }}">
+                         <i class="fa-solid fa-gears nav-icon"></i>
+                         <span class="nav-text">Manage Website Setting</span>
+                         <i class="icon-chevron-down nav-dropdown-arrow"></i>
+                     </a>
+
+                     <ul class="nav-dropdown-menu">
+                         <li>
+                             <a href="{{ route('backend.manage-country') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.manage-country') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>Add Country
+                             </a>
+                         </li>
+                         <li>
+                             <a href="{{ route('backend.edit-gtm-tag') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.edit-gtm-tag') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>GTM Tag
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
+
              </ul>
          </div>
 

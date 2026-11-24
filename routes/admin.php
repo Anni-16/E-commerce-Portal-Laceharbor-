@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\PrivacyController;
 use App\Http\Controllers\Backend\TermsController;
 use App\Http\Controllers\Backend\SocialMediaController;
 use App\Http\Controllers\Backend\BlogsController;
+use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\FAQCategoryController;
 use App\Http\Controllers\Backend\FAQController;
 use App\Http\Controllers\Backend\GtmTagController;
@@ -138,4 +139,17 @@ Route::prefix('admin')->group(function () {
         ->name('backend.edit-gtm-tag');
     Route::put('gtm-tag/update', [GtmTagController::class, 'update'])
         ->name('backend.gtm-tag.update');
+
+
+    // Manage Website Setting Pages Routes
+    // For country
+    Route::get('/manage-country', [CountryController::class, 'index'])
+        ->name('backend.manage-country');
+    Route::post('/manage-country', [CountryController::class, 'store'])
+        ->name('backend.manage-country.store');
+    Route::put('/manage-country/{id}', [CountryController::class, 'update'])
+        ->name('backend.manage-country.update');
+    Route::delete('/manage-country/{id}', [CountryController::class, 'destroy'])
+        ->name('backend.manage-country.destroy');
+
 });
