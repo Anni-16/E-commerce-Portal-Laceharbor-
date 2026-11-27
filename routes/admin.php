@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\GtmTagController;
 use App\Http\Controllers\Backend\MetaSeoController;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Backend\GeneralSettingController;
+use App\Http\Controllers\Backend\SizeGuideController;
 
 Route::prefix('admin')->group(function () {
 
@@ -128,6 +129,25 @@ Route::prefix('admin')->group(function () {
         ->name('backend.update-faq');
     Route::delete('/delete-faq/{id}', [FAQController::class, 'deleteFaq'])
         ->name('backend.delete-faq');
+
+
+    // Manage Product Setting
+    // Size Guide
+    Route::get('manage-size-guide', [SizeGuideController::class, 'index'])
+        ->name('backend.manage-size-guide');
+    Route::get('/view-sizeguide/{id}', [SizeGuideController::class, 'viewSizeGuide'])
+        ->name('backend.view-sizeguide');
+    Route::get('/add-sizeguide', [SizeGuideController::class, 'addSizeGuide'])
+        ->name('backend.add-sizeguide');
+    Route::post('/store-sizeguide', [SizeGuideController::class, 'storeSizeGuide'])
+        ->name('backend.store-sizeguide');
+    Route::get('/edit-sizeguide/{id}', [SizeGuideController::class, 'editSizeGuide'])
+        ->name('backend.edit-sizeguide');
+    Route::put('/update-sizeguide/{id}', [SizeGuideController::class, 'updateSizeGuide'])
+        ->name('backend.update-sizeguide');
+    Route::delete('/delete-sizeguide/{id}', [SizeGuideController::class, 'deleteSizeGuide'])
+        ->name('backend.delete-sizeguide');
+
 
 
     // Manage SEO Setting

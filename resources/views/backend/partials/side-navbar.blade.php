@@ -80,6 +80,7 @@
                          </li>
                      </ul>
                  </li>
+
                  <li class="nav-item">
                      <a href="{{ route('backend.manage-banner') }}"
                          class="nav-link {{ request()->routeIs('backend.manage-banner') ? 'active' : '' }}">
@@ -87,6 +88,7 @@
                          <span class="nav-text">Manage Banner</span>
                      </a>
                  </li>
+
                  <li class="nav-item has-dropdown {{ request()->routeIs('backend.mange-faq-categories') ? 'active' : '' }}">
                      <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.manage-faq-categories') ? 'active' : '' }}">
                          <i class="icon-circle-help nav-icon"></i>
@@ -110,6 +112,7 @@
                          </li>
                      </ul>
                  </li>
+
                  <li class="nav-item">
                      <a href="{{ route('backend.manage-blogs') }}"
                          class="nav-link {{ request()->routeIs('backend.manage-blogs') ? 'active' : '' }}">
@@ -117,6 +120,24 @@
                          <span class="nav-text">Manage Blogs</span>
                      </a>
                  </li>
+
+                 <li class="nav-item has-dropdown {{ request()->routeIs('backend.manage-size-guide') ? 'active' : '' }}">
+                     <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.manage-size-guide') ? 'active' : '' }}">
+                         <i class="fa-solid fa-boxes-stacked nav-icon"></i>
+                         <span class="nav-text">Manage Products Setting</span>
+                         <i class="icon-chevron-down nav-dropdown-arrow"></i>
+                     </a>
+
+                     <ul class="nav-dropdown-menu">
+                         <li>
+                             <a href="{{ route('backend.manage-size-guide') }}"
+                                 class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.manage-size-guide') ? 'active' : '' }}">
+                                 <span class="nav-sub-dot"></span>Add Size Guide
+                             </a>
+                         </li>
+                     </ul>
+                 </li>
+
 
                  <li class="nav-item has-dropdown {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
                      <a href="#" class="nav-link nav-dropdown-toggle {{ request()->routeIs('backend.edit-all-pages-seo') ? 'active' : '' }}">
@@ -159,13 +180,13 @@
                          <li>
                              <a href="{{ route('backend.manage-state') }}"
                                  class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.manage-state') ? 'active' : '' }}">
-                                 <span class="nav-sub-dot"></span>Add State 
+                                 <span class="nav-sub-dot"></span>Add State
                              </a>
                          </li>
                          <li>
                              <a href="{{ route('backend.general-setting') }}"
                                  class="nav-link nav-sublink d-flex align-items-center gap-2 {{ request()->routeIs('backend.general-setting') ? 'active' : '' }}">
-                                 <span class="nav-sub-dot"></span>General Setting 
+                                 <span class="nav-sub-dot"></span>General Setting
                              </a>
                          </li>
 
